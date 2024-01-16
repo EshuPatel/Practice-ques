@@ -7,6 +7,7 @@ class array1{
         for (int i=0; i<arr.length; i++){
             arr[i]=sc.nextInt();
         }
+        sc.close();
     }
 
     // printing array
