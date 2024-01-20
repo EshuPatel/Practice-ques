@@ -31,7 +31,7 @@ public class print extends array1 {
     int rev[]= new int[3];
     createArray(3, rev);
     revPrint(rev);
-   // evenprint(rev);
+    evenprint(rev);
     System.out.println(secmax(rev));
 
     }
