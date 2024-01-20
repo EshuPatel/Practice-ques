@@ -19,6 +19,14 @@ class array1{
         System.out.println("]");
     }
 
+    // searching value
+    static int searcharr(int arr[], int val){
+        for (int i=0; i<arr.length; i++){
+            if(arr[i]==val){
+                return i;
+            }
+            }
+            }
     
     
 
@@ -39,7 +47,8 @@ class array1{
         for (int i: arr1){       //i will access each value separately
             System.out.println(i);
         }
-        
+
+        searcharr(arr1, 45);
         //passing array to mthd
         // public static void mini(int array[]){
         //     int m=array[0];
@@ -51,15 +60,6 @@ class array1{
         //     System.out.println(m);
         // }
         // min(arr);
-
-         
-              
-
-
-        
-
-
-
 sc.close();
     }
 }
