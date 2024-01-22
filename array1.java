@@ -26,8 +26,18 @@ class array1{
                 return i;
             }
             }
+            return 0;
             }
-    
+    // passing array to mthd
+    public static void mini(int array[]){
+        int m=array[0];
+        for (int i: array){
+            if (i<m){
+                m=i;
+            }
+        }
+        System.out.println(m);
+    }
     
 
     public static void main(String[] args){
@@ -49,17 +59,7 @@ class array1{
         }
 
         searcharr(arr1, 45);
-        //passing array to mthd
-        // public static void mini(int array[]){
-        //     int m=array[0];
-        //     for (int i: array){
-        //         if (i<m){
-        //             m=i;
-        //         }
-        //     }
-        //     System.out.println(m);
-        // }
-        // min(arr);
+        mini(arr1);
 sc.close();
     }
 }

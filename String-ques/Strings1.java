@@ -25,12 +25,12 @@ public class Strings1 {
         e2=sc.nextLine();
         // concate(e1, e2);
 
-        StringJoiner s = new StringJoiner(", ","hi",);  
+        StringJoiner s = new StringJoiner(", ","hi", "guy");  
 
         String e3= new String("Hello");   
         String s2 = new String(" World");    
-        String s = String.format("%s%s%s",e1,e2,e3);   
-        System.out.println(s.toString());
+        String s1 = String.format("%s%s%s",e1,e2,e3);   
+        System.out.println(s1.toString());
 
         
     }
