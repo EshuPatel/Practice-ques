@@ -31,17 +31,17 @@ public class basics {
         curr.nxt=new_node;
     }
 
-    public void insertAfter(String new_data, Node prev_node){
+    public void insertAfter(String new_data, int pos){
         Node new_Node =new Node(new_data);
-        // check if node exists
-        if(head==null){
-            head=new_Node;
+        // check if list empty
+        if (head==null){
+            System.out.println("empty lst");
         }
         // traverse and find prev_node
         Node curr=head;
         Node currNxt=curr.nxt;
-        while (curr!=null) {
-            if (curr==prev_node){
+        for(int i=0; i<=pos; i++) {
+            if (i==pos){
                 curr.nxt=new_Node;
                 new_Node.nxt=currNxt;
             }
@@ -70,7 +70,8 @@ public class basics {
         bs.printLs();
         bs.insertEnd("list");
         bs.printLs();
-        bs.insertAfter("is", bs.head);
+        bs.insertAfter("is", 1);
+        bs.printLs();
 
         
     }
