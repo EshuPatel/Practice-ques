@@ -2,19 +2,22 @@ public class stack{
     // using array
 
     int size;
-    int stck[];
     int ptr=-1;
+    int stck[];
 
     stack(){
-        int stck[]= new int[5];        // default size=5
+         stck= new int[5]; 
+         size =5;       // default size=5
     }
     stack(int size){
-        int stck[]= new int[size];
+         stck= new int[size];
+         this.size=size;
     }
 
-    void push(int val) throws NullPointerException{
+    void push(int val) throws ArrayIndexOutOfBoundsException{
         if(ptr==size){
             System.out.println("overflow");
+            throw new ArrayIndexOutOfBoundsException();
         }
         ptr=ptr+1;
         stck[ptr]=val;
@@ -48,12 +51,16 @@ public class stack{
     }
 
 public static void main(String[] args) {
-    stack st = new stack(3);
-    st.isEmpty();
+    stack st = new stack(4);
+    // st.isEmpty();
     st.push(9);
+    System.out.println(st.ptr);
     st.push(8);
+    System.out.println(st.ptr);
     st.push(7);
+    System.out.println(st.ptr);
     st.push(6);
+    System.out.println(st.ptr);
     st.pop();
 }
 }
