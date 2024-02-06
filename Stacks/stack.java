@@ -1,9 +1,9 @@
 public class stack{             
     // using array
 
-    int size;
-    int ptr=-1;
-    int stck[];
+    private int size;
+    private int ptr=-1;
+    private int stck[];
 
     stack(){
          stck= new int[5]; 
@@ -14,17 +14,17 @@ public class stack{
          this.size=size;
     }
 
-    void push(int val) throws ArrayIndexOutOfBoundsException{
-        if(ptr==size){
+    void push(int val) {
+        if(isFull()){
             System.out.println("overflow");
-            throw new ArrayIndexOutOfBoundsException();
+             return;
         }
         ptr=ptr+1;
         stck[ptr]=val;
     }
 
     int pop(){
-        if(ptr==-1){
+        if(isEmpty()){
             System.out.println("can't pop from empty stack");
             return -1;
         }
@@ -52,15 +52,16 @@ public class stack{
 
 public static void main(String[] args) {
     stack st = new stack(4);
-    // st.isEmpty();
+    st.isEmpty();
     st.push(9);
-    System.out.println(st.ptr);
+    System.out.println(st.top());
     st.push(8);
-    System.out.println(st.ptr);
     st.push(7);
-    System.out.println(st.ptr);
+    System.out.println(st.top());
     st.push(6);
-    System.out.println(st.ptr);
     st.pop();
+    System.out.println(st.top());
+    st.pop();
+    st.isFull();
 }
 }
