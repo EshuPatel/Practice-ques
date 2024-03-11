@@ -1,5 +1,5 @@
 # Practice-ques
-This is just for practicing various concepts I learn about.
+This is just a showcase for various concepts I learn about in DSA.
 <br>
 Author- Eshu Patel
 
